@@ -29,8 +29,6 @@ For each employee, return:
 ---
 */
 ## Solution
-
-```sql
 WITH floor_count AS (
     SELECT
         name,
@@ -62,7 +60,7 @@ FROM floor_count f
 JOIN total_visits t
     ON f.name = t.name
 WHERE f.rank = 1;
-```
+
 
 ---
 /*
