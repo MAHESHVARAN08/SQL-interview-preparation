@@ -1,42 +1,58 @@
 # SQL Interview Preparation
 
-This repository contains SQL questions and solutions I've practiced and solved from various platforms, courses, and challenges as part of my SQL learning journey and interview preparation.
+A collection of SQL interview and practice problems I've solved, with explanations of the logic and approach behind each solution — not just the queries themselves.
 
 ## 📁 Repository Structure
 
 ### `100_daysof_SQL/`
-A day-by-day SQL practice series covering progressively challenging queries and concepts — from basic `SELECT` statements to advanced joins, subqueries, and window functions.
+Daily SQL practice problems with detailed write-ups, including:
+- **Most Visited Floor** – Find each employee's most-visited floor and resource usage using CTEs and `ROW_NUMBER()`
+- **New and Repeat Customers** – Classify daily orders as new vs. repeat customer orders using a self-join on first purchase date
+- **Nth Occurrence of Sunday** – Date arithmetic to find the nth Sunday after a given date, using `EXTRACT(DOW ...)`
+- **Pivot and Unpivot** – Convert row-based salary component data into columnar format using `CASE` + `SUM`, without database-specific PIVOT functions
 
 ### `Leetcode/`
-Solutions to SQL problems from LeetCode's database question set, including topics like joins, aggregations, ranking functions, and string/date manipulation.
+Solutions to classic LeetCode SQL problems:
+- **Rank** – Rank scores using `DENSE_RANK()` to handle ties without gaps
 
 ### `Namastesql/`
-Practice queries and exercises following the Namaste SQL course/series, covering core SQL fundamentals and real-world query patterns.
+Business-analytics style SQL problems based on real-world scenarios:
+- **Airbnb Top Hosts** – Find top-rated hosts with 2+ listings using joins, subqueries, and `HAVING`
+- **Electricity Consumption** – Aggregate household consumption and cost by year
+- **LinkedIn Top Voice** – Identify top creators by follower count, post volume, and impressions
+- **Premium Customers** – Find customers ordering above the average order count
+- **Return Orders Customer Feedback** – Identify customers with high return rates using `LEFT JOIN` and ratio calculations
+- **Product Category** – Bucket products into price tiers using `CASE` in a subquery
 
 ### `Udemy course/`
-Exercises and solved problems from a Udemy SQL course, reinforcing concepts through hands-on practice.
+Window function exercises on a Sakila/Pagila-style dataset:
+- Average film length by category (`AVG() OVER PARTITION BY`)
+- Counting repeated payments (`COUNT() OVER`)
+- Top customers by country (`ROW_NUMBER()` + ranking)
+- Daily revenue trends with `LAG()` for period-over-period comparison
+- Running totals with `SUM() OVER (ORDER BY ...)`
 
 ## 🎯 Topics Covered
 
-- Basic to advanced `SELECT` queries
-- Joins (INNER, LEFT, RIGHT, FULL, SELF)
-- Aggregate functions and `GROUP BY` / `HAVING`
-- Subqueries and nested queries
-- Window functions (`RANK`, `ROW_NUMBER`, `LAG`/`LEAD`, etc.)
+- Joins (INNER, LEFT, SELF)
+- Aggregate functions, `GROUP BY`, `HAVING`
+- Subqueries and correlated subqueries
+- Window functions (`ROW_NUMBER`, `RANK`, `DENSE_RANK`, `LAG`, running totals)
 - Common Table Expressions (CTEs)
-- String, date, and conditional functions
-- Real-world interview-style problems
+- Conditional aggregation (`CASE` + `SUM`/`COUNT`)
+- Date and string functions
+- Manual pivot/unpivot without DB-specific syntax
 
 ## 🚀 How to Use
 
-Each folder contains `.sql` files with the question (as a comment) followed by the solution query. Browse by folder depending on the source you're interested in, or explore by topic if you're preparing for a specific area.
+Each `.sql` file follows the same format: the problem statement and table schema are included as a comment block, followed by the solution query, followed by a detailed explanation of the approach and logic. This makes each file useful both as a reference and as a way to review reasoning before interviews.
 
 ## 📌 About
 
-This is an ongoing learning repository — new solutions are added regularly as I continue practicing for SQL interviews and improving my query-writing skills.
+An ongoing learning repository — updated regularly as part of continued SQL interview preparation.
 
 ## 📫 Connect
 
-Feel free to check out my other repositories:
+Check out my other repositories:
 - [Python-interview-preparation](https://github.com/MAHESHVARAN08/Python-interview-preparation)
 - [Pyspark_learning](https://github.com/MAHESHVARAN08/Pyspark_learning)
