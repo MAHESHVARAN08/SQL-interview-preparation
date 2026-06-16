@@ -33,8 +33,52 @@ final AS (
 -- (up to) the 80% threshold of total sales.
 SELECT *
 FROM final
-
-
 WHERE running_sales <= total_sales
 ORDER BY product_sales DESC;
- 
+
+/* ============================================================
+   Part 5: Explanation & Real-World Application
+   ============================================================
+   
+   WHY USE THE PARETO PRINCIPLE?
+   
+   The Pareto Principle (80/20 rule) states that approximately 80% of 
+   effects come from 20% of causes. In business analytics, this means:
+   - 80% of sales often come from 20% of products
+   - 80% of problems come from 20% of root causes
+   - 80% of revenue comes from 20% of customers
+   
+   BUSINESS BENEFITS:
+   
+   1. INVENTORY OPTIMIZATION
+      - Focus warehouse space and resources on high-impact products
+      - Reduce carrying costs by prioritizing best sellers
+      - Better demand forecasting for top 20%
+   
+   2. MARKETING FOCUS
+      - Allocate marketing budget to top-performing products
+      - Maximize ROI by concentrating efforts on what sells
+      - Identify which products drive customer loyalty
+   
+   3. RESOURCE ALLOCATION
+      - Prioritize product development for proven winners
+      - Make data-driven decisions on R&D investment
+      - Discontinue low-impact products to reduce complexity
+   
+   4. PERFORMANCE ANALYSIS
+      - Quickly identify business drivers
+      - Benchmark product performance
+      - Track changes in product mix over time
+   
+   EXAMPLE OUTPUT:
+   
+   product_id | product_sales | running_sales | total_sales
+   ----------|---------------|---------------|----------
+   P001      | 50,000        | 50,000        | 100,000
+   P002      | 35,000        | 85,000        | 100,000
+   P003      | 15,000        | 100,000       | 100,000
+   
+   Result: Products P001 and P002 (20% of products) generate 85% of 
+   total sales, confirming the Pareto principle in action.
+   
+   ============================================================ */
