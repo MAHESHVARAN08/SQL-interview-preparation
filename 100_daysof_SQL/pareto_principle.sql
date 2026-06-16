@@ -33,8 +33,7 @@ final AS (
 -- (up to) the 80% threshold of total sales.
 SELECT *
 FROM final
-WHERE running_sales <= total_sales
-ORDER BY product_sales DESC;
+WHERE running_sales <= total_sales;
 
 /* ============================================================
    Part 5: Explanation & Real-World Application
