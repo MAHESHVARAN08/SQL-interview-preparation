@@ -10,6 +10,9 @@ Daily SQL practice problems with detailed write-ups, including:
 - **New and Repeat Customers** – Classify daily orders as new vs. repeat customer orders using a self-join on first purchase date
 - **Nth Occurrence of Sunday** – Date arithmetic to find the nth Sunday after a given date, using `EXTRACT(DOW ...)`
 - **Pivot and Unpivot** – Convert row-based salary component data into columnar format using `CASE` + `SUM`, without database-specific PIVOT functions
+- **Friends Score** – Find persons whose friends' combined score exceeds 100, using a CTE with `INNER JOIN`, `GROUP BY`, and `HAVING`
+- **Pareto Principle (80/20 Rule)** – Identify the smallest set of top-selling products contributing to 80% of total sales using `SUM() OVER` for running totals
+- **WHERE vs HAVING** – Demonstrates row-level filtering with `WHERE` versus group-level filtering with `HAVING` on employee salary data
 
 ### `Leetcode/`
 Solutions to classic LeetCode SQL problems:
@@ -42,6 +45,7 @@ Window function exercises on a Sakila/Pagila-style dataset:
 - Conditional aggregation (`CASE` + `SUM`/`COUNT`)
 - Date and string functions
 - Manual pivot/unpivot without DB-specific syntax
+- `WHERE` vs `HAVING` filtering semantics
 
 ## 🚀 How to Use
 
