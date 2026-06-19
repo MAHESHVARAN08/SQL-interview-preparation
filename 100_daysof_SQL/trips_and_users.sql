@@ -73,3 +73,33 @@ FROM Trips
 WHERE client_id IN (SELECT client_id FROM client_unbanned)
   AND driver_id IN (SELECT driver_id FROM driver_unbanned)
 GROUP BY request_at;
+
+/*
+# Summary
+
+This SQL file solves a **cancellation rate problem** from a ride-sharing platform (similar to Leetcode 1093).
+
+## Key Components:
+
+**Problem:**
+- Calculate the daily cancellation rate for trips from October 1-3, 2013
+- Cancellation rate = (cancelled trips) / (total trips), where both client and driver are NOT banned
+
+**Solution Approach:**
+1. **Two CTEs** identify unbanned clients and drivers by filtering the Users table for `banned = 'No'`
+2. **Main query** filters Trips to only include rows where:
+   - Client is in the unbanned clients list
+   - Driver is in the unbanned drivers list
+3. **Aggregation** groups by `request_at` (date) and calculates:
+   - Count of cancelled trips (using `CASE` with `LIKE 'cancelled%'` to match any cancellation status)
+   - Total trip count
+   - Cancellation percentage
+
+**Output Columns:**
+- `request_at` – trip date
+- `cancelled_trip_count` – number of cancelled trips
+- `total_trips` – all trips with unbanned participants
+- `cancelled_percent` – cancellation rate as a percentage
+
+This is a well-structured solution that properly handles the business logic of filtering banned users before calculating metrics.
+*/
