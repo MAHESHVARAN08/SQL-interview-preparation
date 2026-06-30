@@ -2,6 +2,18 @@
 
 A collection of SQL interview and practice problems I've solved, with explanations of the logic and approach behind each solution — not just the queries themselves.
 
+## 📊 Current Status
+
+| Folder | Problems Solved |
+|---|---|
+| `100_daysof_SQL/` | 10 |
+| `Leetcode/` | 1 |
+| `Namastesql/` | 6 |
+| `Udemy course/` | 1 |
+| **Total** | **18** |
+
+*Last updated: June 2026 — actively maintained, with new problems added regularly.*
+
 ## 📁 Repository Structure
 
 ### `100_daysof_SQL/`
@@ -11,6 +23,7 @@ Daily SQL practice problems with detailed write-ups, including:
 - **Nth Occurrence of Sunday** – Date arithmetic to find the nth Sunday after a given date, using `EXTRACT(DOW ...)`
 - **Pivot and Unpivot** – Convert row-based salary component data into columnar format using `CASE` + `SUM`, without database-specific PIVOT functions
 - **Friends Score** – Find persons whose friends' combined score exceeds 100, using a CTE with `INNER JOIN`, `GROUP BY`, and `HAVING`
+- **Median Salary** – Compute the median salary per department using window functions to rank and select middle row(s)
 - **Pareto Principle (80/20 Rule)** – Identify the smallest set of top-selling products contributing to 80% of total sales using `SUM() OVER` for running totals
 - **WHERE vs HAVING** – Demonstrates row-level filtering with `WHERE` versus group-level filtering with `HAVING` on employee salary data
 
