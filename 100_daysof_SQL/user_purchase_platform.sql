@@ -78,3 +78,5 @@ select spend_date,platform,sum(amount) as total_amount, count(user_id) as total_
 from spends
 group by spend_date,platform
 order by spend_date,platform desc
+
+--EXPLANATION
